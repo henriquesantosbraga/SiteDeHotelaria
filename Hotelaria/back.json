@@ -1,0 +1,14 @@
+const campoSenha = document.getElementById('senha');
+const btnMostrarSenha = document.getElementById('btn-mostrar-senha');
+
+btnMostrarSenha.addEventListener('click', function() {
+    
+    // 3. Verificamos o tipo atual do input de senha
+    if (campoSenha.type === 'password') {
+        campoSenha.type = 'text';
+        btnMostrarSenha.textContent = '🔒';
+    } else {
+        campoSenha.type = 'password';
+        btnMostrarSenha.textContent = '👁️';
+    }
+});
