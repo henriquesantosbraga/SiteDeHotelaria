@@ -1,0 +1,216 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo da página inteira */
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Faz os elementos ficarem um abaixo do outro (Navbar em cima, Conteúdo embaixo) */
+}
+
+/* --- ESTILO DA NAVBAR (IGUAL AO BOOKING) --- */
+.navbar-hotel {
+    background-color: #003580; /* Azul do Booking */
+    width: 100%;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar-logo a {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px 16px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+}
+
+.navbar-menu a:hover, 
+.navbar-menu li.ativo a {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid white;
+}
+
+.navbar-acoes {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.moeda-lang {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.btn-nav {
+    background-color: white;
+    color: #003580;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.btn-nav:hover {
+    background-color: #f0f4fa;
+}
+
+
+/* --- ÁREA DE CENTRALIZAÇÃO DO LOGIN --- */
+.login-wrapper {
+    flex: 1; /* Ocupa o restante do espaço vertical da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Caixa branca do formulário */
+.card-login {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.card-header h2 {
+    color: #003580;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.card-header p {
+    color: #718096;
+    font-size: 14px;
+}
+
+/* Campos de entrada */
+.campo-input {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #2d3748;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #003580;
+    box-shadow: 0 0 0 3px rgba(0, 53, 128, 0.1);
+}
+
+/* Botão do Olhinho (JavaScript) dentro do input */
+#btn-mostrar-senha {
+    position: absolute;
+    right: 12px;
+    top: 35px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.link-esqueceu {
+    margin-bottom: 20px;
+}
+
+a {
+    color: #003580;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Botão Entrar */
+.btn-enviar {
+    width: 100%;
+    padding: 14px;
+    background-color: #003580;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-bottom: 10px;
+}
+
+.btn-enviar:hover {
+    background-color: #002254;
+}
+
+/* Rodapé do card */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid #edf2f7;
+    padding-top: 15px;
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+
+.voltar {
+    color: #718096;

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Hotel Acapulco</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar-hotel">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="index.html">Hotel Acapulco</a>
+            </div>
+            <nav class="navbar-menu">
+                <ul>
+                    <li class="ativo"><a href="#">🛏️ Hospedagens</a></li>
+                    <li><a href="#">✈️ Voos</a></li>
+                    <li><a href="#">🚗 Aluguel de carros</a></li>
+                    <li><a href="#">🎡 Atrações</a></li>
+                    <li><a href="#">🚕 Táxis (aeroporto)</a></li>
+                </ul>
+            </nav>
+            <div class="navbar-acoes">
+                <span class="moeda-lang">BRL 🇧🇷</span>
+                <a href="#" class="btn-nav">Cadastre-se</a>
+                <a href="#" class="btn-nav">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="login-wrapper">
+        <main class="card-login">
+            <header class="card-header">
+                <h2>Acesse sua conta</h2>
+                <p>Gerencie suas reservas no Hotel Acapulco</p>
+            </header>
+
+            <form action="#" method="POST">
+                <div class="campo-input">
+                    <label for="email">E-mail ou Número de Reserva:</label>
+                    <input type="email" id="email" name="email" placeholder="seu-email@exemplo.com" required>
+                </div>
+
+                <div class="campo-input" style="position: relative;">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                    <button type="button" id="btn-mostrar-senha">👁️</button>
+                </div>
+
+                <div class="link-esqueceu">
+                    <a href="#">Esqueceu sua senha?</a>
+                </div>
+                
+                <button type="submit" class="btn-enviar">Entrar</button>
+            </form>
+
+            <footer>
+                <p>Ainda não tem uma conta? <a href="#">Cadastre-se aqui</a></p>
+                <p><a href="index.html" class="voltar">Voltar para a página inicial</a></p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
