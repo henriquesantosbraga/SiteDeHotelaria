@@ -3,14 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aprendendo</title>
+    <title>Login | Hotel Acapulco</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>
-        Olá, Mundo!
-    </h1>
-    <p>
-        E aí, tudo bem?
-    </p>
+
+    <main>
+        
+        <header>
+            <h2>Hotel Acapulco</h2>
+            <p>Acesse sua conta para gerenciar suas reservas</p>
+        </header>
+
+        <form action="#" method="POST">
+            
+            <div class="campo-input">
+                <label for="email">E-mail ou Número de Reserva:</label>
+                <input type="email" id="email" name="email" placeholder="seu-email@exemplo.com" required>
+            </div>
+
+            <div class="campo-input">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+            </div>
+
+            <div class="link-esqueceu">
+                <a href="#">Esqueceu sua senha?</a>
+            </div>
+            
+            <button type="submit">Entrar</button>
+
+        </form>
+
+        <footer>
+            <p>Ainda não tem uma conta? <a href="#">Cadastre-se aqui</a></p>
+            <p><a href="index.html" class="voltar">Voltar para a página inicial</a></p>
+        </footer>
+
+    </main>
+    <div class="campo-input" style="position: relative;">
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+    <button type="button" id="btn-mostrar-senha" style="position: absolute; right: 10px; top: 32px; background: none; border: none; color: #1a365d; cursor: pointer; width: auto; padding: 0;">👁️</button>
+    
+    </div>
+    <script src="script.js"></script>
+
 </body>
 </html>
