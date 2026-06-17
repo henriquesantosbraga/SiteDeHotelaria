@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Hotel Acapulco</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar-hotel">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="index.html">Hotel Acapulco</a>
+            </div>
+            <nav class="navbar-menu">
+                <ul>
+                    <li class="ativo"><a href="#">🛏️ Hospedagens</a></li>
+                    <li><a href="#">✈️ Voos</a></li>
+                    <li><a href="#">🚗 Aluguel de carros</a></li>
+                    <li><a href="#">🎡 Atrações</a></li>
+                    <li><a href="#">🚕 Táxis (aeroporto)</a></li>
+                </ul>
+            </nav>
+            <div class="navbar-acoes">
+                <span class="moeda-lang">BRL 🇧🇷</span>
+                <a href="#" class="btn-nav">Cadastre-se</a>
+                <a href="#" class="btn-nav">Login</a>
+            </div>
+        </div>
+    </header>
+    <div class="login-wrapper">
+        <main class="card-login">
+            <header class="card-header">
+                <h2>Crie sua conta</h2>
+                <p>Cadastre-se para acumular pontos e fazer reservas rápidas</p>
+            </header>
+
+            <form id="form-cadastro">
+                <div class="campo-input">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                </div>
+
+                <div class="campo-input">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="seu-email@exemplo.com" required>
+                </div>
+
+                <div class="campo-input" style="position: relative;">
+                    <label for="senha">Crie uma Senha:</label>
+                    <input type="password" id="senha" name="senha" placeholder="Mínimo 6 caracteres" required>
+                    <button type="button" id="btn-mostrar-senha">👁️</button>
+                </div>
+
+                <button type="submit" class="btn-enviar">Concluir Cadastro</button>
+            </form>
+
+            <footer>
+                <p>Já possui uma conta? <a href="TelaLogin.html">Faça login aqui</a></p>
+                <p><a href="index.html" class="voltar">Voltar para a página inicial</a></p>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        // Reaproveitando a lógica do olhinho que você enviou no script.js
+        const campoSenha = document.getElementById('senha');
+        const btnMostrarSenha = document.getElementById('btn-mostrar-senha');
+
+        btnMostrarSenha.addEventListener('click', function() {
+            if (campoSenha.type === 'password') {
+                campoSenha.type = 'text';
+                btnMostrarSenha.textContent = '🔒';
+            } else {
+                campoSenha.type = 'password';
+                btnMostrarSenha.textContent = '👁️';
+            }
+        });
+
+        // MÁGICA DO REDIRECIONAMENTO:
+        const formCadastro = document.getElementById('form-cadastro');
+        formCadastro.addEventListener('submit', function(evento) {
+            evento.preventDefault(); // Impede o envio tradicional para o servidor fictício
+
+            // Aqui você pode adicionar lógica futura para salvar os dados (ex: localStorage ou API)
+            alert('Cadastro realizado com sucesso! Redirecionando para a tela de login...');
+
+            // Redireciona automaticamente para sua TelaLogin.html
+            window.location.href = 'TelaLogin.html';
+        });
+    </script>
+</body>
+</html>
