@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Acapulco | Início</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para a estrutura de abas e menu lateral da Index */
+        .index-container {
+            display: flex;
+            min-height: 100vh;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100vh;
+            background-color: #003580;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar .logo a {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .sidebar .nav-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .sidebar .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            display: block;
+            padding: 12px 15px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+        .sidebar .nav-links a:hover, .sidebar .nav-links a.active-lnk {
+            background-color: rgba(255, 255, 255, 0.15);
+            font-weight: bold;
+        }
+        .content-area {
+            margin-left: 250px;
+            width: calc(100% - 250px);
+            display: flex;
+            flex-direction: column;
+        }
+        .top-bar {
+            background-color: #002254;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            align-items: center;
+        }
+        .main-content {
+            padding: 40px;
+            color: white;
+            flex: 1;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .home-grid {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        .home-grid img {
+            max-width: 50%;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        }
+        .btn-reserva {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #003580;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background 0.2s;
+        }
+        .btn-reserva:hover {
+            background-color: #f0f4fa;
+        }
+        .servicos-lista {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .servicos-lista li {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="index-container">
+        <nav class="sidebar">
+            <div class="logo">
+                <a href="#">Hotel Acapulco</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="menu-btn active-lnk" data-target="inicio">🏠 Home</a></li>
+                <li><a href="#" class="menu-btn" data-target="sobre-o-hotel">👤 Sobre</a></li>
+                <li><a href="#" class="menu-btn" data-target="servicos">💼 Serviços</a></li>
+                <li><a href="#" class="menu-btn" data-target="contato">📞 Contato</a></li>
+            </ul>
+        </nav>
+
+        <div class="content-area">
+            <div class="top-bar">
+                <span style="color: white; font-size: 14px; margin-right: 10px;">BRL 🇧🇷</span>
+                <a href="cadastro.html" class="btn-nav">Cadastre-se</a>
+                <a href="TelaLogin.html" class="btn-nav">Login</a>
+            </div>
+
+            <main class="main-content">
+                <section id="inicio" class="tab-content active">
+                    <div class="home-grid">
+                        <div class="text">
+                            <span style="color: #cbd5e0; font-size: 14px; letter-spacing: 2px;">BEM-VINDO AO LUXO E AO CONFORTO</span>
+                            <h1 style="font-size: 42px; margin: 10px 0 20px 0;">Hotel Acapulco</h1>
+                            <p style="font-size: 18px; line-height: 1.6; color: #e2e8f0;">O seu refúgio perfeito onde o azul do mar encontra o descanso que você merece.</p>
+                            
+                            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                                <a href="#" class="btn-reserva menu-btn" data-target="servicos">Conhecer Nossos Serviços</a>
+                                <a href="#" class="btn-reserva menu-btn" data-target="sobre-o-hotel">Conheça Nossa História</a>
+                                <a href="#" class="btn-reserva menu-btn" data-target="contato">Reserve Agora</a>
+                            </div>
+                        </div>
+
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/465374907.jpg?k=636989f0fb144c8d84643414adfb679891e6717f7fced83bd5eade65b09ff125&o=" alt="Hotel Acapulco">
+                    </div>
+                </section>
+
+                <section id="sobre-o-hotel" class="tab-content">
+                    <h2 style="font-size: 32px; margin-bottom: 20px;">Nossa História</h2>
+                    <div style="font-size: 16px; line-height: 1.8; max-width: 800px; color: #e2e8f0;">
+                        <p style="margin-bottom: 15px;">Tudo começou com uma promessa: criar um refúgio onde o azul do mar e o conforto de casa se encontrassem no mesmo horizonte. O Hotel Acapulco nasceu do desejo de oferecer mais do que uma hospedagem, mas um capítulo inesquecível na memória de cada viajante.</p>
+                        <p style="margin-bottom: 15px;">Desde os primeiros traços da nossa architecture até o aroma de café fresco que invade os corredores todas as manhãs, cada detalhe foi planejado para celebrar o bem-estar. Ao longo dos anos, nossas paredes testemunharam risadas em família, brindes ao pôr do sol, lua de mel sob o luar e viajantes solitários que encontraram aqui o seu próprio ritmo.</p>
+                        <p style="margin-bottom: 15px;">Hoje, mantemos a mesma essência acolhedora do início, combinada com a modernidade que você merece. No Hotel Acapulco, as preocupações ficam lá fora, e o tempo — ah, o tempo — passa um pouquinho mais devagar.</p>
+                        <p><strong>Seu refúgio está pronto. Bem-vindo ao Hotel Acapulco.</strong></p>
+                    </div>
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/56/fa/c3/radha-regent-bengaluru.jpg?w=1400&h=-1&s=1" alt="sobre o hotel" style="max-width: 100%; height: auto; margin-top: 35px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
+                </section>
+
+                <section id="servicos" class="tab-content">
+                    <h2 style="font-size: 32px; margin-bottom: 20px;">Nossos Serviços</h2>
+                    <p style="color: #cbd5e0;">Tudo que você precisa para uma estada perfeita:</p>
+                    <ul class="servicos-lista">
+                        <li>📶 Wi-Fi gratuito de alta velocidade</li>
+                        <li>🍳 Café da manhã artesanal incluso</li>
+                        <li>🏊 Piscina aquecida e massagens</li>
+                        <li>🏋️ Academia de ginástica completa</li>
+                        <li>🛎️ Serviço de quarto 24h</li>
+                    </ul>
+                    <img src="https://unitedhospitalitymgmt.com/wp-content/uploads/2022/05/hospital-management-img.png" alt="serviços do hotel" style="max-width: 100%; height: auto; margin-top: 35px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
+                </section>
+
+                <section id="contato" class="tab-content">
+                    <h2 style="font-size: 32px; margin-bottom: 20px;">Contato</h2>
+                    <div style="font-size: 18px; line-height: 2; margin-bottom: 15px;">
+                        <p>📞 <strong>Telefone:</strong> (11) 1234-5678</p>
+                        <p>📧 <strong>Email:</strong> contato@hotelacapulco.com.br</p>
+                        <p>📍 <strong>Localização:</strong> Av. Beira Mar, nº 1000 - Acapulco</p>
+                    </div>
+                    <img src="https://blog.simpleshotel.com.br/wp-content/uploads/2025/07/20250715_1647_Recepcao-de-Hotel-Tecnologica_simple_compose_01k07syq8zftsvbe0hm50yy82a-1024x683.png" alt="contato hotel" style="max-width: 100%; height: auto; margin-top: 35px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        const botoes = document.querySelectorAll('.menu-btn');
+        const secoes = document.querySelectorAll('.tab-content');
+
+        botoes.forEach(botao => {
+            botao.addEventListener('click', (e) => {
+                e.preventDefault();
+                const alvoId = botao.getAttribute('data-target');
+                
+                // Esconde seções e remove classe ativa dos botões do menu lateral
+                secoes.forEach(secao => secao.classList.remove('active'));
+                botoes.forEach(btn => btn.classList.remove('active-lnk'));
+                
+                // Ativa a aba correspondente
+                document.getElementById(alvoId).classList.add('active');
+                
+                // Adiciona o estilo ativo no menu lateral (se o clique veio de lá)
+                const botaoMenuCorrespondente = document.querySelector(`.sidebar .menu-btn[data-target="${alvoId}"]`);
+                if(botaoMenuCorrespondente) {
+                    botaoMenuCorrespondente.classList.add('active-lnk');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
